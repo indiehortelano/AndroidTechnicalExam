@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidTechnicalExam</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="error_message">Something went wrong. Please check connection and try again.</string>
+</resources>
