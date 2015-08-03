@@ -1,7 +1,6 @@
 package com.androidtechnicalexam.app.retrofit;
 
 import com.androidtechnicalexam.app.models.MyModel;
-import com.androidtechnicalexam.app.models.ResponseModel;
 
 import java.util.ArrayList;
 
