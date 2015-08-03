@@ -1,7 +1,3 @@
-general:
-    artifacts:
-        -/home/ubuntu/AndroidTechnicalExam/app/build/outputs/apk/
-
 machine:
     environment:
         ANDROID_HOME: /usr/local/android-sdk-linux
