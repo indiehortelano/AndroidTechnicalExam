@@ -1,3 +1,7 @@
+general:
+    artifacts:
+        - /home/ubuntu/AndroidTechnicalExam/build/outputs/reports/testFolderName/connected
+
 machine:
     environment:
         ANDROID_HOME: /usr/local/android-sdk-linux
