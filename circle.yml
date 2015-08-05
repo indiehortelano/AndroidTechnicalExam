@@ -15,5 +15,5 @@ dependencies:
 test:
     override:
         - ./gradlew lint
-        - cp -r AndroidTechnicalExam/build/outputs $CIRCLE_ARTIFACTS
+        - cp -r /home/ubuntu/AndroidTechnicalExam/app/build/outputs $CIRCLE_TEST_REPORTS
 
