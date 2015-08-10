@@ -14,5 +14,5 @@ dependencies:
 
 test:
     override:
-        - ./gradlew lint customFindbugs
+        - ./gradlew lint customFindbugs pmd
         - cp -r /home/ubuntu/AndroidTechnicalExam/app/build/outputs $CIRCLE_TEST_REPORTS

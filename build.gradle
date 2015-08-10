@@ -19,6 +19,7 @@ allprojects {
 }
 
 apply plugin: 'findbugs'
+apply plugin: 'pmd'
 
 task customFindbugs(type: FindBugs) {
     ignoreFailures = true
@@ -38,6 +39,25 @@ task customFindbugs(type: FindBugs) {
         }
         html {
             destination "${project.rootDir}/app/build/outputs/findbugs/findbugs.html"
+        }
+    }
+}
+
+task pmd(type: Pmd) {
+    ruleSetFiles = files("${project.rootDir}/config/quality/pmd/pmd-ruleset.xml")
+    ignoreFailures = true
+    ruleSets = []
+
+    source = fileTree('app/src/main/java')
+
+    reports {
+        xml.enabled = false
+        html.enabled = true
+        xml {
+            destination "${project.rootDir}/app/build/outputs/pmd/pmd-output.xml"
+        }
+        html {
+            destination "${project.rootDir}/app/build/outputs/pmd/pmd-output.html"
         }
     }
 }
