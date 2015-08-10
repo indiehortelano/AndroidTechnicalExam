@@ -17,3 +17,27 @@ allprojects {
         jcenter()
     }
 }
+
+apply plugin: 'findbugs'
+
+task customFindbugs(type: FindBugs) {
+    ignoreFailures = true
+    effort = "max"
+    reportLevel = "low"
+    excludeFilter = new File("${project.rootDir}/config/quality/findbugs/findbugs-filter.xml")
+    classes = files("${project.rootDir}/app/build/intermediates/classes")
+
+    source = fileTree('app/src/main/java')
+    classpath = files()
+
+    reports {
+        xml.enabled = false
+        html.enabled = true
+        xml {
+            destination "${project.rootDir}/app/build/outputs/findbugs/findbugs.xml"
+        }
+        html {
+            destination "${project.rootDir}/app/build/outputs/findbugs/findbugs.html"
+        }
+    }
+}
